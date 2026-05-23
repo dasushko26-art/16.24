@@ -1,0 +1,10 @@
+import random
+import string
+
+def random_letters_gen():
+    while True:
+        yield random.choice(string.ascii_letters)
+
+letters = random_letters_gen()
+for _ in range(10):
+    print(next(letters))
